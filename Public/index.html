@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WA-Earn Pro | Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); max-width: 500px; margin: auto; border-top: 6px solid #25D366; }
+        h2 { text-align: center; color: #075e54; margin-bottom: 10px; }
+        .input-group { margin: 20px 0; display: flex; gap: 10px; }
+        input { flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
+        button { padding: 12px 20px; background: #25D366; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        #code-box { font-size: 35px; color: #128c7e; text-align: center; margin: 25px 0; letter-spacing: 8px; font-weight: bold; min-height: 45px; background: #f9f9f9; border-radius: 10px; padding: 10px; }
+        .wallet { background: #e7fce3; padding: 20px; border-radius: 12px; text-align: center; margin-top: 20px; }
+        .admin-table { width: 100%; margin-top: 30px; border-collapse: collapse; font-size: 14px; }
+        .admin-table th, .admin-table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        .status-on { color: #25D366; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>💰 WA-EARN PRO</h2>
+    <p style="text-align:center; color:#666;">WhatsApp link karein aur har minute online rehne ke Rs. 2 kamayein.</p>
+    
+    <div class="input-group">
+        <input type="text" id="phone" placeholder="923001234567">
+        <button onclick="fetchCode()">Get Code</button>
+    </div>
+
+    <div id="code-box"></div>
+    <p id="msg" style="text-align:center; font-size:13px; color:#555;"></p>
+
+    <div class="wallet">
+        <h3 style="margin:0;">My Earnings: <span style="color:#075e54;">Rs. <span id="wal">0</span></span></h3>
+    </div>
+
+    <div style="margin-top:40px; border-top: 1px solid #ddd; padding-top: 15px;">
+        <h4 style="color:#555; margin-bottom:10px;">🛠 Admin: Live Users</h4>
+        <table class="admin-table">
+            <thead>
+                <tr><th>User</th><th>Status</th><th>Profit</th></tr>
